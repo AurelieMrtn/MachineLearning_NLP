@@ -29,7 +29,7 @@ def run():
             st.write("#### Article 3")
             verify(article_3)
     else:
-        st.warning("Please upload at least three text files to verify Zipf's.")
+        st.warning("Please upload at least three text files to verify Zipf's law.")
 
             
 # Verify law        
