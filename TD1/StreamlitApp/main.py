@@ -2,7 +2,7 @@ import importlib
 import streamlit as st
 import nltk
 
-nltk.download()
+st.system("pip install nltk")
 
 home = importlib.import_module("Pages.Home")
 
