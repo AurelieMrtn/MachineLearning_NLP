@@ -1,7 +1,10 @@
 import streamlit as st
 import spacy
 from nltk.tokenize import word_tokenize, WhitespaceTokenizer, TreebankWordTokenizer, WordPunctTokenizer
+import nltk
 
+nltk.download('punkt')
+  
 def run(): 
     # Style
     st.title("Tokenization")
