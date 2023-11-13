@@ -1,5 +1,8 @@
 import importlib
 import streamlit as st
+import nltk
+
+nltk.download()
 
 home = importlib.import_module("Pages.Home")
 
