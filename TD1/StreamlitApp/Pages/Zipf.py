@@ -15,18 +15,11 @@ def run():
     if uploaded_files:
         for file in uploaded_files:
             articles.append(file.read().decode('utf-8'))
-            
-    # Text inputs
-    article_1 = st.text_area("Enter first article:", "")
-    article_2 = st.text_area("Enter second article:", "")
-    article_3 = st.text_area("Enter third article:", "")
-     
+      
     if len(articles) == 3:
         article_1, article_2, article_3 = articles
-    else:
-        st.warning("Please upload at least three text files to verify Zipf's law or write in the three text box.")
-
-    if st.button("Verify Zipf's law"):
+        
+        if st.button("Verify Zipf's law"):
             st.write("#### Article 1")
             verify(article_1)
             
@@ -35,6 +28,9 @@ def run():
             
             st.write("#### Article 3")
             verify(article_3)
+    else:
+        st.warning("Please upload at least three text files to verify Zipf's.")
+
             
 # Verify law        
 def verify(text):
