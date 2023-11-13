@@ -1,6 +1,5 @@
 import importlib
 import streamlit as st
-import nltk
 
 st.system("pip install nltk")
 
