@@ -4,6 +4,8 @@ import re
 import nltk
 from nltk.corpus import stopwords
 
+nltk.download('stopwords')
+
 def run():
     # Style
     st.title("Text Cleaning")
@@ -40,7 +42,6 @@ def sw(language):
     try:
         return set(stopwords.words(language))
     except LookupError:
-        nltk.download('stopwords')
         return set(stopwords.words(language))
 
 def lowercase(text):
