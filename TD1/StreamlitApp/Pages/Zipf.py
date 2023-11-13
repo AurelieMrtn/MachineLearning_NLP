@@ -21,22 +21,21 @@ def run():
     article_2 = st.text_area("Enter second article:", "")
     article_3 = st.text_area("Enter third article:", "")
      
-    if len(articles) != 0:
-        if len(articles) == 3:
-            article_1, article_2, article_3 = articles
-            
-            if st.button("Verify Zipf's law"):
-                st.write("#### Article 1")
-                verify(article_1)
-                
-                st.write("#### Article 2")
-                verify(article_2)
-                
-                st.write("#### Article 3")
-                verify(article_3)
-        else:
-            st.warning("Please upload at least three text files to verify Zipf's law.")
+    if len(articles) == 3:
+        article_1, article_2, article_3 = articles
+    else:
+        st.warning("Please upload at least three text files to verify Zipf's law or write in the three text box.")
 
+    if st.button("Verify Zipf's law"):
+            st.write("#### Article 1")
+            verify(article_1)
+            
+            st.write("#### Article 2")
+            verify(article_2)
+            
+            st.write("#### Article 3")
+            verify(article_3)
+            
 # Verify law        
 def verify(text):
     words = text.split()
