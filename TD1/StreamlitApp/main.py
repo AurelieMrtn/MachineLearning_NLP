@@ -2,7 +2,6 @@ import importlib
 import streamlit as st
 
 home = importlib.import_module("Pages.Home")
-
 cleaning = importlib.import_module("Pages.Cleaning")
 tokenization = importlib.import_module("Pages.Tokenization")
 lemmatization = importlib.import_module("Pages.Lemmatization")
