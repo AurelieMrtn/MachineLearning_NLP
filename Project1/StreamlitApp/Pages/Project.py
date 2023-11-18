@@ -13,8 +13,7 @@ def run():
     
     # Import combined_scores
     current_directory = os.getcwd()
-    #file_path = current_directory + '/StreamlitApp/Pages/combined_scores.json'
-    file_path = current_directory + '/StreamlitApp/Pages/requirements.txt'
+    file_path = current_directory + '/StreamlitApp/Pages/combined_scores.json'
     
     with open(file_path, 'r') as file:
         combined_scores = json.load(file)
