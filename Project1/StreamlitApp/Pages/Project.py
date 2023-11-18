@@ -7,7 +7,7 @@ def run():
     # Style
     st.title("Information Retrieval")
 
-    # Text input
+    # Text input in only types text
     #query_input = st.text_input("Type a query number:", "PLAIN-1")
     
     # Import combined_scores
