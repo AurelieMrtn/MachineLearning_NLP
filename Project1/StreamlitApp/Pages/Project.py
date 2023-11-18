@@ -10,7 +10,7 @@ def run():
     query_input = st.text_input("Type a query number:", "PLAIN-1")
     
     # Import combined_scores
-    file_path = '/StreamlitApp/Pages/combined_scores.json'
+    file_path = '/combined_scores.json'
 
     with open(file_path, 'r') as file:
         combined_scores = json.load(file)
