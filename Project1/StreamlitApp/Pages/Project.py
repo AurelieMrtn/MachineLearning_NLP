@@ -19,14 +19,15 @@ def run():
         combined_scores = json.load(file)
     print(combined_scores)
     
-    if query_input in combined_scores:
-        # Find the document with the highest score for the given query
-        highest_score_doc = max(combined_scores[query_input], key=combined_scores[query_input].get)
-        highest_score = combined_scores[query_input][highest_score_doc]
+    if query_input and query_input in combined_scores:
+        # Sorting the documents for the given query based on their scores
+        sorted_docs = sorted(combined_scores[query_input].items(), key=lambda x: x[1], reverse=True)
 
-        st.write("Output :")
-        st.write(f"Document with the highest score for query '{query_input}': {highest_score_doc} (Score: {highest_score})")
+        # Display the top 3 results
+        st.write("Top 3 Documents for Query:", query_input)
+        for doc_id, score in sorted_docs[:3]:
+            st.write(f"{doc_id}: Score = {score}")
     else:
-        st.write("No results found for the given query.")
+        st.write("No results found for the given query or invalid query number.")
         
 run()
