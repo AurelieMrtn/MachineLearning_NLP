@@ -8,7 +8,7 @@ def run():
     st.title("Information Retrieval")
 
     # Text input
-    query_input = st.text_input("Type a query number:", "PLAIN-1")
+    #query_input = st.text_input("Type a query number:", "PLAIN-1")
     
     # Import combined_scores
     current_directory = os.getcwd()
@@ -17,6 +17,12 @@ def run():
     with open(file_path, 'r') as file:
         combined_scores = json.load(file)
     print(combined_scores)
+    
+    # Extract query keys (e.g., 'PLAIN-1', 'PLAIN-2', ...)
+    query_keys = list(combined_scores.keys())
+
+    # Query selector
+    query_input = st.selectbox("Select a query number:", query_keys)
     
     if query_input and query_input in combined_scores:
         # Sorting the documents for the given query based on their scores
