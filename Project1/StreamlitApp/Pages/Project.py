@@ -1,7 +1,6 @@
 import streamlit as st
 import json
 import os
-import requests
 
 def run():
 
@@ -29,5 +28,3 @@ def run():
             st.write(f"{doc_id}: Score = {score}")
     else:
         st.write("No results found for the given query or invalid query number.")
-        
-run()
