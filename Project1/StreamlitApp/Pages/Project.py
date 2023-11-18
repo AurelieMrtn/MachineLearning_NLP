@@ -1,5 +1,6 @@
 import streamlit as st
 import json
+import os
 
 def run():
 
@@ -10,10 +11,12 @@ def run():
     query_input = st.text_input("Type a query number:", "PLAIN-1")
     
     # Import combined_scores
-    file_path = '/combined_scores.json'
+    current_directory = os.getcwd()
+    file_path = current_directory + '/StreamlitApp/Pages/combined_scores.json'
 
     with open(file_path, 'r') as file:
         combined_scores = json.load(file)
+    print(combined_scores)
     
     if query_input in combined_scores:
         # Find the document with the highest score for the given query
@@ -25,3 +28,5 @@ def run():
         st.write(f"Document with the highest score for query '{query_input}': {highest_score_doc} (Score: {highest_score})")
     else:
         st.write("No results found for the given query.")
+        
+run()
