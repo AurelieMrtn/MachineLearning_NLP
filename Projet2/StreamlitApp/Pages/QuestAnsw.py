@@ -25,17 +25,14 @@ def run():
 
         if not filtered_restaurants.empty:
             st.subheader("Matching Restaurants:")
-            for row in filtered_restaurants:
+            for index, row in filtered_restaurants.iterrows():
                 st.write((f"Name of the restaurant: {row['Restaurant_Name']}"))
                 ratings_df = pd.DataFrame({
                     'Information': ['Ranking', 'Price Range', 'Cuisine Type'],
                     'Value': [row['Ranking'], row['Price_Range'], row['Cuisine_Type']]
                 })
                 st.table(ratings_df)
-                st.write("---")
-                
-                
-                
+                st.write("---")  
         else:
             st.write("No matching restaurants found.")
     else:
