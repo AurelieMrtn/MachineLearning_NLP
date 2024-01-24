@@ -16,7 +16,7 @@ def run():
 
     # Filter the DataFrame based on the entered restaurant name
     if review_input:
-        filtered_reviews = reviews[reviews['Restaurant_Name'].str.contains(review_input, case=False, na=False)]
+        filtered_reviews = reviews[reviews['Text'].str.contains(review_input, case=False, na=False)]
 
         # Display reviews for the restaurant
         if not filtered_reviews.empty:

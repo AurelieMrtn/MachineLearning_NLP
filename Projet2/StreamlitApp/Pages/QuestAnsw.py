@@ -24,10 +24,16 @@ def run():
             filtered_restaurants = filtered_restaurants[filtered_restaurants['Price_Range'].str.contains(price_input, case=False, na=False)]
 
         if not filtered_restaurants.empty:
-            st.write("Matching Restaurants:")
-            for restaurant in filtered_restaurants['Restaurant_Name']:
-                st.write(restaurant)
+            st.subheader("Matching Restaurants:")
+            for _, row in filtered_restaurants.iterrows():
+                st.write((f"Name of the restaurant: {row['Restaurant_Name']}"))
+                ratings_df = pd.DataFrame({
+                    'Information': ['Ranking', 'Price Range', 'Cuisine Type'],
+                    'Value': [row['Ranking'], row['Price_Range'], row['Cuisine_Type']]
+                })
+                st.table(ratings_df)
+                st.write("---")
         else:
             st.write("No matching restaurants found.")
     else:
-        st.write("Please enter a cuisine type or price range to search (For exemple, you can try: De 31 € à 50 € and Française - Traditionnelle.")
+        st.write("Please enter a cuisine type or price range to search (For exemple, you can try: De 31 € à 50 € and Française.")
