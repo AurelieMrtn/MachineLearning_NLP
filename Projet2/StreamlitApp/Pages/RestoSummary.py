@@ -37,11 +37,14 @@ def run():
             if not filtered_reviews.empty:
                 st.subheader("Reviews")
                 for _, review_row in filtered_reviews.iterrows():
-                    st.write(f"Global Rating: {review_row['Global_Ranking']}")
-                    st.write(f"Meal Rating: {review_row['Plats_Ranking']}")
-                    st.write(f"Service Rating: {review_row['Service_Ranking']}")
-                    st.write(f"Atmoshpere Rating: {review_row['Atmosphere_Ranking']}")
+                    # Create a DataFrame for ratings
+                    ratings_df = pd.DataFrame({
+                        'Rating Type': ['Global Rating', 'Meal Rating', 'Service Rating', 'Atmosphere Rating'],
+                        'Score': [review_row['Global_Ranking'], review_row['Plats_Ranking'], review_row['Service_Ranking'], review_row['Atmosphere_Ranking']]
+                    })
+                    st.table(ratings_df)
                     st.write(f"Review: {review_row['Text']}")
+                    st.write("---")  # This adds a horizontal line
             else:
                 st.write("No reviews available for this restaurant.")
         else:
