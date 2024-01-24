@@ -6,21 +6,25 @@ def run():
 
     # Project Description
     st.header("Project Overview")
-    st.write("Provide a detailed overview of your project here. "
-             "Explain the goals, the scope, and what you are trying to achieve.")
+    st.write("In this project, we have retrieved Paris' restaurant data from OpenTable. On this app, we can retrieve a restaurant's summary from its name, information from a review and ask question to find a restaurant.")
 
-    # Dataset Descriptions
-    st.header("Datasets Used")
+    # Restaurant Dataset Description
     st.subheader("Restaurant Dataset")
-    st.write("Describe your restaurant dataset here. "
-             "Include details about the data source, the kind of information it contains, "
-             "such as restaurant names, cuisine types, price ranges, etc.")
+    st.write("The restaurant dataset provides comprehensive details about various dining establishments. "
+             "It includes the following key information: "
+             "\n- **Restaurant_Name**: The name of each restaurant. "
+             "\n- **Ranking**: A numeric score reflecting the restaurant's quality or popularity. "
+             "\n- **Price_Range**: Textual representation of the cost of dining, indicating the budget for a meal. "
+             "\n- **Cuisine_Type**: The type of cuisine offered, highlighting the culinary variety. "
+             "\n- **Menu Items**: A list of dishes available, giving insights into the menu offerings.")
 
+    # Review Dataset Description
     st.subheader("Review Dataset")
-    st.write("Describe your review dataset here. "
-             "Detail the type of reviews included, the ratings, and how they relate to the restaurants.")
-
-    # Additional Information
-    st.header("Additional Information")
-    st.write("Any additional information about your project can go here. "
-             "This might include your methodology, tools used, or any challenges faced during development.")
+    st.write("The review dataset contains detailed customer reviews for the restaurants. Key components include: "
+             "\n- **Restaurant_Name**: Name of the restaurant being reviewed, linking the feedback to the establishment. "
+             "\n- **Ranking**: Overall customer rating, reflecting general satisfaction. "
+             "\n- **Global_Ranking**: A broader evaluation score, potentially aggregating various aspects. "
+             "\n- **Plats_Ranking**: Rating specifically for the dishes served. "
+             "\n- **Service_Ranking**: Assessment of the service quality. "
+             "\n- **Atmosphere_Ranking**: Rating for the ambiance and environment. "
+             "\n- **Text**: Written reviews providing qualitative customer feedback.")
