@@ -2,19 +2,17 @@ import importlib
 import streamlit as st
 
 home = importlib.import_module("Pages.Home")
-cleaning = importlib.import_module("Pages.Cleaning")
-tokenization = importlib.import_module("Pages.Tokenization")
-lemmatization = importlib.import_module("Pages.Lemmatization")
-similarityMeasure = importlib.import_module("Pages.SimilarityMeasure")
-zipfLawVerification = importlib.import_module("Pages.Zipf")
+explanations = importlib.import_module("Pages.Explanations")
+summary = importlib.import_module("Pages.RestoSummary")
+info = importlib.import_module("Pages.InfoRetriev")
+qa = importlib.import_module("Pages.QuestAnsw")
 
 PAGES = {
     "Home": home,
-    "Text cleaning" : cleaning,
-    "Tokenization": tokenization,
-    "Lemmatization": lemmatization,
-    "Similarity Measure": similarityMeasure,
-    "Zipf's law verification" : zipfLawVerification
+    "Project Explanations" : explanations,
+    "Restaurant Summary": summary,
+    "Restaurant Information Retrieval": info,
+    "Question and Answer": qa
 }
 
 st.sidebar.title("Navigation")
