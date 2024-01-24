@@ -11,7 +11,7 @@ PAGES = {
     "Home": home,
     "Project Explanations" : explanations,
     "Restaurant Summary": summary,
-    "Restaurant Information Retrieval": info,
+    "Review Information Retrieval": info,
     "Question and Answer": qa
 }
 
