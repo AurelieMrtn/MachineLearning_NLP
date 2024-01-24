@@ -17,11 +17,10 @@ def run():
 
     # Filter and display matching restaurants
     if cuisine_input or price_input:
-        filtered_restaurants = restaurants.copy()
         if cuisine_input:
-            filtered_restaurants = filtered_restaurants[filtered_restaurants['Cuisine_Type'].str.contains(cuisine_input, case=False, na=False)]
+            filtered_restaurants = restaurants[restaurants['Cuisine_Type'].str.contains(cuisine_input, case=False, na=False)]
         if price_input:
-            filtered_restaurants = filtered_restaurants[filtered_restaurants['Price_Range'].str.contains(price_input, case=False, na=False)]
+            filtered_restaurants = restaurants[restaurants['Price_Range'].str.contains(price_input, case=False, na=False)]
 
         if not filtered_restaurants.empty:
             st.subheader("Matching Restaurants:")
