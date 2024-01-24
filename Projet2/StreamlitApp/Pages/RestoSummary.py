@@ -16,7 +16,7 @@ def run():
     review_file_path = current_directory + '/Projet2/StreamlitApp/Pages/translated_reviews.csv'
     reviews = pd.read_csv(review_file_path)
     
-    restaurants_name = restaurants[restaurants['Restaurant_Name']]
+    restaurants_name = list(restaurants['Restaurant_Name'])
     
     restaurant_input = st.selectbox("Choose a restaurant name:", restaurants_name)
 
