@@ -10,7 +10,7 @@ def run():
     
     # Import combined_scores
     current_directory = os.getcwd()
-    file_path = current_directory + '/Projec2/StreamlitApp/Pages/restaurants.csv'
+    file_path = current_directory + '/Projet2/StreamlitApp/Pages/restaurants.csv'
     
     restaurants = pd.read_csv(file_path)
 
