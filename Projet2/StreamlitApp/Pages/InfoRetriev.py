@@ -31,4 +31,4 @@ def run():
         else:
             st.write("This review doesn't exist.")
     else:
-        st.write("Please enter a review to search.")
+        st.write("Please enter a review to search (For exemple, you can try: Loved it, great service, great food. Friendly. Definitely recommend).")
