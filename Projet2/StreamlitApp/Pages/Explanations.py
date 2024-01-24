@@ -24,6 +24,3 @@ def run():
     st.header("Additional Information")
     st.write("Any additional information about your project can go here. "
              "This might include your methodology, tools used, or any challenges faced during development.")
-
-if __name__ == "__main__":
-    run()

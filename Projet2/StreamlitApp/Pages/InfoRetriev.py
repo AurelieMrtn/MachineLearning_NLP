@@ -20,7 +20,7 @@ def run():
 
         # Display reviews for the restaurant
         if not filtered_reviews.empty:
-            st.subheader("Reviews")
+            st.subheader("Review")
             for _, review_row in filtered_reviews.iterrows():
                 st.write(f"Name of the restaurant: {review_row['Restaurant_Name']}")
                 st.write(f"Global Rating: {review_row['Global_Ranking']}")
