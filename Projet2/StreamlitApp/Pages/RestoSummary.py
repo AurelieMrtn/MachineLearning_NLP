@@ -43,7 +43,7 @@ def run():
                     })
                     st.table(ratings_df)
                     st.write(f"Review: {review_row['Text']}")
-                    st.write("---")  # This adds a horizontal line
+                    st.write("---")
             else:
                 st.write("No reviews available for this restaurant.")
         else:
