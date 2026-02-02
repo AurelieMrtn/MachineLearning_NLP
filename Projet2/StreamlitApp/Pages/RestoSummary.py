@@ -6,18 +6,17 @@ def run():
 
     # Style
     st.title("Restaurant Information Retrieval")
-    
+
     # Import combined_scores
-    current_directory = os.getcwd()
-    file_path = current_directory + '/Projet2/StreamlitApp/Pages/translated_restaurants.csv'
+    file_path = 'translated_restaurants.csv'
     restaurants = pd.read_csv(file_path)
-    
+
     # Load review data
-    review_file_path = current_directory + '/Projet2/StreamlitApp/Pages/translated_reviews.csv'
+    review_file_path = 'translated_reviews.csv'
     reviews = pd.read_csv(review_file_path)
-    
+
     restaurants_name = list(restaurants['Restaurant_Name'])
-    
+
     restaurant_input = st.selectbox("Choose a restaurant name:", restaurants_name)
 
     # Filter the DataFrame based on the entered restaurant name

@@ -7,8 +7,7 @@ def run():
     st.title("Review Information Retrieval")
 
     # Load review data
-    current_directory = os.getcwd()
-    review_file_path = current_directory + '/Projet2/StreamlitApp/Pages/translated_reviews.csv'
+    review_file_path = 'translated_reviews.csv'
     reviews = pd.read_csv(review_file_path)
 
     # User input for restaurant name

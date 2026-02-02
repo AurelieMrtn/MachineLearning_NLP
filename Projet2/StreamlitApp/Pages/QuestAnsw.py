@@ -7,10 +7,9 @@ def run():
     st.title("Search Restaurants by Cuisine or Price")
 
     # Import combined_scores
-    current_directory = os.getcwd()
-    file_path = current_directory + '/Projet2/StreamlitApp/Pages/translated_restaurants.csv'
+    file_path = 'translated_restaurants.csv'
     restaurants = pd.read_csv(file_path)
-    
+
     # User input for cuisine type and price range
     cuisine_input = st.text_input("Enter desired cuisine type:")
     price_input = st.text_input("Enter desired price range:")
